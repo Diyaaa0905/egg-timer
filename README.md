@@ -1,7 +1,7 @@
 # ⋆˙⟡ Egg Timer ⟡˙⋆
 
 <p align="center">
-  <img src="images/demo.gif" alt="Egg Timer Demo" width="400">
+  <img src="egg-timer-demo.png" alt="Egg Timer Demo" width="400">
 </p>
 
 A cute pastel-themed **egg boiling timer** built with **HTML and CSS**. Choose between soft, medium, hard, or extra hard-boiled eggs and get a visual countdown for the perfect egg every time! ⟡˙⋆
