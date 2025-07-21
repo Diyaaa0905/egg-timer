@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Select Egg Type</title>
+        <style>
+            @font-face {
+                font-family:'Minecraft';
+                src: url('font\Minecraft.ttf') format('truetype'), 
+                url("font\Minecraft.woff") format('woff'),
+                url("font\Minecraft.woff2") format('woff2');
+                font-weight: normal;
+                font-style: normal;
+            }
+            body{
+                background-color: rgb(255, 198, 215);
+                font-family: 'Minecraft', sans-serif;
+            }
+            body::before {
+                content: "";
+                position: fixed; /* Ensures it covers the whole screen */
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255, 198, 215, 1);
+                background-image: url('images/StarBG.png');
+                background-size: 400px 400px;
+                background-repeat: repeat;
+                background-blend-mode: overlay;
+                opacity: 0.3; /* Adjust this value to control transparency */
+                z-index: -1; /* Keeps it in the background */
+            }
+            .select{
+                text-align: center;
+            }
+            .container{
+                background-color: rgb(252, 228, 230);
+                border: 1px solid rgb(252, 228, 230);
+                border-radius: 10px;
+                height: 600px;
+                width: 600px;
+                margin: auto;
+                display: grid;
+                grid-template-rows: 300px 300px;
+                grid-template-columns: 300px 300px;
+                box-shadow: 5px 5px 10px rgba(255, 158, 187, 1);
+            }
+            .options{
+                background-color: rgba(252, 131, 167, 0.25);
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+                border: 1px solid rgba(252, 131, 167, 0.25);
+                border-radius: 10px;
+            }
+            img{
+                height: 180px;
+                width: 180px;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                margin-left: 49px;
+                margin-right: 49px;
+                text-align: center;
+                border: 1px solid rgba(252, 131, 167, 0);
+            }
+            .type{
+                height: 40px;
+                width: 150px;
+                padding-top: 10px;
+                margin-bottom: 10px;
+                margin-top: 0px;
+                margin-left: 64px;
+                margin-right: 64px;
+                border-radius: 10px;
+                box-shadow: 5px 5px 10px rgba(255, 158, 187, 1);
+                background-color: rgb(255, 198, 215);
+                border: 1px solid rgb(252, 131, 167);
+                text-align: center;
+            }
+            .type:hover{
+                background-color: rgb(255, 158, 187);
+                height: 35px;
+                width: 131.25px;
+                padding-top: 10px;
+                margin-bottom: 12.5px;
+                margin-top: 2.5px;
+                margin-left: 73.325px;
+                margin-right: 73.325px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="select">
+            <p style="font-size: 40px; margin-top: 10px;">SELECT YOUR EGG TYPE!</p>
+        </div>
+        <div class="container">
+            <div class="options">
+                <div class="GIF"><img src="images\Softboiled Egg .png"></img></div>
+                <div class="type" onclick="window.location.href='startTimer-softBoiled.html';">SOFT BOILED</div>
+            </div>
+            <div class="options">
+                <div class="GIF"><img src="images\Mediumboiled Egg.png"></img></div>
+                <div class="type" onclick="window.location.href='startTimer-softBoiled.html';">MEDIUM BOILED</div>
+            </div>
+            <div class="options">
+                <div class="GIF"><img src="images\Hardboiled Egg.png"></img></div>
+                <div class="type" onclick="window.location.href='startTimer-softBoiled.html';">HARD BOILED</div>
+            </div>
+            <div class="options">
+                <div class="GIF"><img src="images\XXHardboiled Egg.png"></img></div>
+                <div class="type" onclick="window.location.href='startTimer-softBoiled.html';">EXTRA HARD BOILED</div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Timer</title>
+        <style>
+            @font-face {
+                font-family:'Minecraft';
+                src: url('font\Minecraft.ttf') format('truetype'), 
+                url("font\Minecraft.woff") format('woff'),
+                url("font\Minecraft.woff2") format('woff2');
+                font-weight: normal;
+                font-style: normal;
+            }
+            body{
+                background-color: rgb(255, 198, 215);
+                font-family: 'Minecraft', sans-serif;
+            }
+            body::before {
+                content: "";
+                position: fixed; /* Ensures it covers the whole screen */
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255, 198, 215, 1);
+                background-image: url('images/StarBG.png');
+                background-size: 400px 400px;
+                background-repeat: repeat;
+                background-blend-mode: overlay;
+                opacity: 0.3; /* Adjust this value to control transparency */
+                z-index: -1; /* Keeps it in the background */
+            }
+            .start-timer{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <button class="start-timer" onclick="window.location.href='yourEggWillBeReadyIn5.html'">START TIMER</a></button>
+        </div>
+        <div id="timer">05:00</div>
+    </body>
+</html>

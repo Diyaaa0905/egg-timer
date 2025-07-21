@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Egg Timer</title>
+        <script>
+            window.onload = function() {
+                if (window.innerWidth === screen.width && window.innerHeight === screen.height) {
+                    window.open(window.location.href, "_blank", "width=400,height=600");
+                    window.close();
+                }
+            };
+        </script>
+        <style>
+            @font-face {
+                font-family:'Minecraft';
+                src: url('font\Minecraft.ttf') format('truetype'), 
+                url("font\Minecraft.woff") format('woff'),
+                url("font\Minecraft.woff2") format('woff2');
+                font-weight: normal;
+                font-style: normal;
+            }
+            body {
+                font-family: 'Minecraft', sans-serif;
+                text-align: center;
+                background-color: rgba(255, 198, 215, 1);
+            }
+
+            body::before {
+                content: "";
+                position: fixed; /* Ensures it covers the whole screen */
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255, 198, 215, 1);
+                background-image: url('images/StarBG.png');
+                background-size: 400px 400px;
+                background-repeat: repeat;
+                background-blend-mode: overlay;
+                opacity: 0.3; /* Adjust this value to control transparency */
+                z-index: -1; /* Keeps it in the background */
+            }
+
+            div{
+                margin: auto;
+            }
+            .container{
+                position: relative; 
+                background-color: rgb(252, 228, 230); 
+                border-radius: 10px;
+                box-shadow: 10px 10px 20px rgba(252, 131, 167, 0.75);
+                height: 500px;
+                width: 400px;
+                align-self: center;   
+                padding-top: 10px;        
+            }
+            .startpage-GIF{
+                margin: auto;
+                height: 250px;
+                width: 200px;
+                margin-bottom: 10px;
+                margin-top: 10px;
+                border: 1px solid black;
+                border-radius: 10px;
+            }
+            /*.startpage-title{
+                margin: auto;
+                height: 50px;
+                width: 300px;
+                margin-bottom: 10px;
+                margin-top: 10px;
+                border: 1px solid black;
+                
+                
+            }*/
+            .startpage-startbutton{
+                font-family: 'Minecraft', sans-serif;
+                margin: auto;
+                height: 40px;
+                width: 150px;
+                margin-bottom: 10px;
+                margin-top: 10px;
+                border: 1px solid rgb(252, 131, 167);
+                border-radius: 10px;
+                box-shadow: 5px 5px 10px rgba(255, 158, 187, 0.75);
+                background-color: rgb(255, 198, 215);
+            }
+            .startpage-startbutton:hover{
+                background-color: rgb(255, 158, 187);
+                height: 35px;
+                width: 131.25px;
+                margin-top: 12.5px;
+                cursor: pointer;
+            }
+            .name{
+                position: absolute;
+                bottom: 0;
+                right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="startpage-GIF"><p>GIF</p></div>
+            <div class="startpage-title"><p style="font-size: 40px; margin-top: 10px; margin-bottom: 0;">EGG TIMER</p></div>
+            <div><button class="startpage-startbutton" onclick="window.location.href='selectEggType.html';">START</button></div>
+            <div class="name"><p>By Diya Jaiswal ^-^</p></div>
+        </div>
+    </body>
+</html>

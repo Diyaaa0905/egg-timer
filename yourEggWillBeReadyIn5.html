@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>Your egg will be ready in...</div>
+        <div id="timer">05:00</div>
+        <div onclick="window.location.href='startpage.html'">Return To Start-Page</div>
+
+        <script>
+            function startCountdown(durationInSeconds){
+                let timerDisplay= document.getElementById("timer");
+                let timeLeft= durationInSeconds;
+
+                function updateTimer(){
+                    let minutes= Math.floor(timeLeft / 60);
+                    let seconds= timeLeft % 60;
+
+                    //Format time as MM:SS
+                    timerDisplay.textContent= 
+                    (minutes < 10 ? "0" : "") + minutes + ":" + 
+                    (seconds < 10 ? "0" : "") + seconds;
+
+                    if(timeLeft > 0)
+                        timeLeft--; 
+                    else{
+                        clearInterval(timer);
+                        timerDisplay.textContent= "Time's Up!";
+                    }
+                }
+
+                updateTimer(); //Run immediately
+                let timer= setInterval(updateTimer, 1000);
+            }
+
+            startCountdown(3);
+        </script>
+    </body>
+</html>
